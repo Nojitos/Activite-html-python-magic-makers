@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mon App</title>
+</head>
+<body>
+
+  <header class="flex flex-col items-center text-center border-white">
+    <nav class="w-full flex items-center justify-between py-5 px-10">
+      <a href="#" class="text-lg font-bold">Alimama Express</a>
+      <div class="flex space-x-4">
+        <a href="#" class="text-sm">Accueil</a>
+        {% if session["utilisateur"] == NULL %}
+        <a href="/login" class="text-sm">Se connecter</a>
+        <a href="/register" class="text-sm">S'inscrire</a>
+        {% else %}
+        <a href="/publier_annonce" class="text-sm">Publier</a>
+        <a href="/logout" class="text-sm">Se déconnecter</a>
+        {% endif %}
+      </div>
+    </nav>
+    
+  </header>
+  
+  <main class="py-20">
+    {% block content %}
+    
+    {% endblock %}
+
+  </main>
+
+  <footer class="absolute bottom w-full space-x-15 bg-indigo-400 text-black p-20 flex justify-center">
+    <p>Copyright : Noah©</p>
+    <p>Contact : noah@gmail.com</p>
+  </footer>
+</body>
+
+</html>
