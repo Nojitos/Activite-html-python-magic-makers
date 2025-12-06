@@ -9,30 +9,30 @@
 <body>
 
   <header class="flex flex-col items-center text-center border-white">
-    <nav class="w-full flex items-center justify-between py-5 px-10">
+    <nav class="w-full flex items-center justify-between py-5 px-10 bg-amber-300 align-center">
       <a href="/" class="text-lg font-bold">Alimama Express</a>
-      <div class="flex space-x-4">
+      <div class="flex space-x-4 items-center">
         <a href="/" class="text-sm">Accueil</a>
         {% if session["utilisateur"] == NULL %}
         <a href="/login" class="text-sm">Se connecter</a>
-        <a href="/register" class="text-sm">S'inscrire</a>
+        <a href="/register" class="text-sm font-bold text-white bg-amber-600 px-5 py-2 rounded-xl justify-center">S'inscrire</a>
         {% else %}
         <a href="/publier_annonce" class="text-sm">Publier</a>
-        <a href="/logout" class="text-sm">Se déconnecter</a>
+        <a href="/logout" class="text-sm font-bold bg-amber-600 text-white px-5 py-2 justify-center rounded-xl">Se déconnecter</a>
         {% endif %}
       </div>
     </nav>
     
   </header>
   
-  <main class="py-20">
+  <main class="py-10">
     {% block content %}
     
     {% endblock %}
 
   </main>
 
-  <footer class="absolute bottom w-full space-x-15 bg-indigo-400 text-black p-20 flex justify-center">
+  <footer class="absolute bottom w-full space-x-15 bg-amber-300 text-black p-20 flex justify-center">
     <p>Copyright : Noah©</p>
     <p>Contact : noah@gmail.com</p>
   </footer>

@@ -5,13 +5,13 @@
       <div
         class="mx-auto py-10 w-full max-w-xs relative flex flex-col items-center justify-center text-center overflow-visible"
       >
-        <h3 class="text-3xl font-bold">Bienvenue</h3>
+        <h3 class="text-3xl font-bold">Bienvenue👋 </h3>
         <div class="w-full relative flex flex-col items-center justify-center">
           <div
-            class="absolute inset-x-auto top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-full blur-sm"
+            class="absolute inset-x-auto top-0 bg-gradient-to-r from-transparent via-amber-500 to-transparent h-[2px] w-full blur-sm"
           ></div>
           <div
-            class="absolute inset-x-auto top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-full"
+            class="absolute inset-x-auto top-0 bg-gradient-to-r from-transparent via-amber-500 to-transparent h-px w-full"
           ></div>
           <div
             class="absolute inset-x-auto top-0 bg-gradient-to-r from-transparent via-purple-400 to-transparent h-[5px] w-1/2 blur-sm"
@@ -24,11 +24,11 @@
           ></div>
         </div>
         <p class="mt-6 text-m">
-          Alimama Express vous permet de commander n'importe quel article n'importe où dans le monde.
+          Commandez n'importe quel article depuis n'importe où dans le monde.
         </p>
 
         <span
-          class="absolute -z-[1] backdrop-blur-sm inset-0 w-full h-full flex before:content-[''] before:h-3/4 before:w-full before:bg-gradient-to-r before:from-black before:to-purple-600 before:blur-[90px] after:content-[''] after:h-1/2 after:w-full after:bg-gradient-to-br after:from-cyan-400 after:to-sky-300 after:blur-[90px]"
+          class="absolute -z-[1] backdrop-blur-sm inset-0 w-full h-full flex before:content-[''] before:h-3/4 before:w-full before:bg-gradient-to-r before:from-amber before:to-purple-600 before:blur-[90px] after:content-[''] after:h-1/2 after:w-full after:bg-gradient-to-br after:from-amber-400 after:to-purple-300 after:blur-[90px]"
         ></span>
       </div>
     </div>
@@ -38,9 +38,9 @@
 
     {% for annonce in annonce %}
 
-      <article class="bg-amber-100 border border-amber-400 rounded-md">
+      <article class="bg-white border border-amber-500 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
         <h2 class="text-2xl text-center p-3">{{annonce["titre"]}}</h2>
-        <p class="text-xl p-2">{{annonce["auteur"]}}</p>
+        <p class="text-xl p-2">🦸{{annonce["auteur"]}}</p>
         <p class="p-4">{{annonce["description"]}}</p>
       </article>
 
